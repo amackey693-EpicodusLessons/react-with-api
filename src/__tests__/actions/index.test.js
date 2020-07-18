@@ -23,4 +23,4 @@ describe('headline reducer actions', () => {
       error
     });
   });
-});
+});  
