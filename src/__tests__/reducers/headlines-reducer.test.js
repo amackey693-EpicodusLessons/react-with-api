@@ -22,7 +22,7 @@ describe('headlinesReducer', () => {
       error
     }
     expect(headlinesReducer(loadingState, action)).toEqual({
-      isLaoding: false, 
+      isLoading: false, 
       headlines: [],
       error: "An error"
     });
