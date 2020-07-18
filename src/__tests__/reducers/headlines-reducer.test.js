@@ -15,6 +15,19 @@ describe('headlinesReducer', () => {
     error: null
   };
 
+  test('failing to get headlines should change isLoading to false and add an error message', () => {
+    const error = "An error";
+    action = {
+      type: c.GET_HEADLINES_FAILURE, 
+      error
+    }
+    expect(headlinesReducer(loadingState, action)).toEqual({
+      isLaoding: false, 
+      headlines: [],
+      error: "An error"
+    });
+  });
+
   test('successfully getting headlines should change isLoading to false and update headlines', () => {
     const headlines = "A headline";
     action = {
